@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="Contextualized Text Representation for Diacritic-Free Hebrew TTS">
+    <meta property="og:title" content="Contextualized Text Representation for Diacritic-Free Hebrew TTS"/>
+
+
+    <title>Contextualized Text Representation for Diacritic-Free Hebrew TTS</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/audio-table.css">
+
+    <link rel="stylesheet" href="static/css/index.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">Contextualized Text Representation for Diacritic-Free
+                        Hebrew TTS</h1>
+                    <div class="is-size-5 publication-authors">
+                        Anonymous Submission to Interspeech 2024
+
+                    </div>
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="hero-body">
+            <video poster="" id="tree" autoplay="" controls="" muted="" loop="" height="90%">
+                <!-- Your video here -->
+                <source src="static/videos/banner_video.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</section>
+<!-- End teaser video -->
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        We tackle the task of text-to-speech (TTS) in Hebrew. Traditional Hebrew contains Diacritics
+                        (“Nikud”), which dictates the
+                        way individuals should pronounce given words, however modern Hebrew rarely uses them. The lack
+                        of Diacritics in modern
+                        Hebrew results in readers expected to conclude the correct pronunciation and understand which
+                        phonemes to use based on the
+                        context. This imposes an inheriting challenge on TTS systems
+                        to accurately map between text to audio. In this study, we propose a Diacritics-Free TTS method,
+                        which leverages contextualized text representation together with a word-piece tokenizer.
+                        We demonstrate the efficiency of the proposed method considering a TTS method operating over
+                        discrete speech representation
+                        optimized using in-the-wild weakly supervised recordings. Results suggest the proposed method is
+                        superior to the evaluated
+                        baselines considering both content preservation, and naturality
+                        of the generated speech. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Audio Samples -->
+<section class="section hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <h2 class="title is-3">Audio Samples</h2>
+
+            <h2 class="title is-4">HebTTS (Tokenizers)</h2>
+            <table class="audio-table">
+                <thead>
+                <tr>
+                    <th class="audio-header-row">Diacritic-Free Hebrew Prompt</th>
+                    <th class="audio-header-row">char</th>
+                    <th class="audio-header-row">subword</th>
+                    <th class="audio-header-row">alephbert</th>
+                    <th class="audio-header-row">alephbert + subwords</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="hebrew-cell">
+                        היי מה קורה
+                    </td>
+                    <td class="audio-cell">
+                        Empty
+                    </td>
+                    <td class="audio-cell">
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/subword_v2/osim_temp=1-top_k=50_0.wav>
+                        </audio>
+                    </td>
+                    <td class="audio-cell">
+                        Empty
+                    </td>
+
+                    <td class="audio-cell">
+                        Empty
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td class="hebrew-cell">
+                        אבל מה שעובר על סמוטריץ׳ הוא לא הסיפור הסיפור הוא משהו אחר לגמרי
+                    </td>
+                    <td class="audio-cell">
+                        Empty
+                    </td>
+                    <td class="audio-cell">
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/subword_v2/osim_temp=1-top_k=50_1.wav>
+                        </audio>
+                    </td>
+                    <td class="audio-cell">
+                        Empty
+                    </td>
+
+                    <td class="audio-cell">
+                        Empty
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td class="hebrew-cell">
+                        ובשביל להבין למה מחיר הדלק כל כך עלה צריך לחזור שנתיים אחורנית
+                    </td>
+                    <td class="audio-cell">
+                        Empty
+                    </td>
+                    <td class="audio-cell">
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/subword_v2/osim_temp=1-top_k=50_2.wav>
+                        </audio>
+                    </td>
+                    <td class="audio-cell">
+                        Empty
+                    </td>
+
+                    <td class="audio-cell">
+                        Empty
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td class="hebrew-cell">
+                        כששאלתי אותה למה היא החליטה לפתוח עסק של לק ג'ל התשובה שלה היתה מאוד ברורה
+                    </td>
+                    <td class="audio-cell">
+                        Empty
+                    </td>
+                    <td class="audio-cell">
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/subword_v2/osim_temp=1-top_k=50_3.wav>
+                        </audio>
+                    </td>
+                    <td class="audio-cell">
+                        Empty
+                    </td>
+
+                    <td class="audio-cell">
+                        Empty
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td class="hebrew-cell">
+                        תגידו גנבו לכם פעם את האוטו ופשוט ידעתם שאין טעם להגיש תלונה במשטרה
+                    </td>
+                    <td class="audio-cell">
+                        Empty
+                    </td>
+                    <td class="audio-cell">
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/subword_v2/osim_temp=1-top_k=50_4.wav>
+                        </audio>
+                    </td>
+                    <td class="audio-cell">
+                        Empty
+                    </td>
+
+                    <td class="audio-cell">
+                        Empty
+                    </td>
+
+                </tr>
+
+                </tbody>
+            </table>
+
+
+            <h2 class="title is-4 table-title">Benchmark</h2>
+            <table class="audio-table">
+                <thead>
+                <tr>
+                    <th class="audio-header-row">Diacritic-Free Hebrew Prompt</th>
+                    <th class="audio-header-row">HebTTS</th>
+                    <th class="audio-header-row">Roboshaul</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="hebrew-cell">
+                        היי מה קורה
+                    </td>
+                    <td class="audio-cell">
+                        Empty
+                    </td>
+
+                    <td class="audio-cell">
+                        Empty
+                    </td>
+
+
+                </tr>
+
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    </div>
+</section>
+<!--/ Audio Samples -->
+
+
+</body>
+</html>
