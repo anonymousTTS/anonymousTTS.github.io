@@ -101,12 +101,23 @@
     <div class="hero-body">
         <div class="container is-max-desktop">
             <h2 class="title is-3">Audio Samples</h2>
+            <p>
+                A comparison of MMS and Roboshaul to our method with 2 different tokenizers.
+                Character and WordPiece tokenizers as detailed in the paper.
+                The first 4 recordings are generated with a recording of Ran Levi (Making History podcast)
+                as an acoustic prompt.
+                The fifth is a 'zero-shot' sample which generated using an acoustic prompt of an unseen speaker
+                (Shaul Amsterdamski - Hayot Kiss podcast)
+            </p>
+
+            <br>
+            <br>
 
             <table class="audio-table">
                 <thead>
                 <tr>
                     <th class="audio-header-row ours">Diacritic-Free Hebrew Prompt</th>
-                    <th class="audio-header-row">mms</th>
+                    <th class="audio-header-row">MMS</th>
                     <th class="audio-header-row">Roboshaul</th>
                     <th class="audio-header-row">Ours (chars)</th>
                     <th class="audio-header-row ours">Ours (WordPiece)</th>
