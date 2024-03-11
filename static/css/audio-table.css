@@ -3,13 +3,18 @@
 
 }
 
+
 .audio-cell {
   /* Center audio widgets in the table cell. */
   text-align: center;
   padding-bottom: 1px;
   padding-top: 1px;
-  width: 50px;
-    align-items: center;
+      vertical-align: middle;
+}
+
+.zero-shot{
+        /*display: flex;*/
+  justify-content: space-between;
 }
 .audio-cell-padded {
   text-align: center;
@@ -31,9 +36,14 @@
   width: 70px;
   padding-top: 10px;
   padding-bottom: 10px;
+    font-weight: normal;
+
+}
+
+.ours{
+    font-weight: bolder !important;
 }
 .sample audio {
-  vertical-align: middle;
   padding-left: 3px;
   padding-right: 3px;
 }
@@ -42,10 +52,14 @@
     direction: rtl;
     width: 40%;
     padding-right: 30px;
-    vertical-align: top;
+        text-align: start !important;
+    padding-top: 10px !important;
+        padding-bottom: 10px !important;
+
+
 }
 audio {
-    width: 50px;
+    width: 50px  !important;
 }
 
 .round-button {
@@ -85,8 +99,10 @@ table {
     font-size: medium;
     font-style: normal;
     color: -internal-quirk-inherit;
-    text-align: start;
+    text-align: center;
+    vertical-align: middle;
     border-spacing: 2px;
     border-color: grey;
     font-variant: normal;
 }
+
