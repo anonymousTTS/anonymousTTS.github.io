@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link rel="stylesheet" href="static/css/audio-table.css">
 
     <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="static/css/audio-table.css">
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -39,22 +39,19 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column has-text-centered">
-                    <h1 class="title is-1 publication-title">A Language Modeling Approach to Diacritic-Free Hebrew TTS</h1>
+                    <h1 class="title is-1 publication-title">A Language Modeling Approach to Diacritic-Free Hebrew
+                        TTS</h1>
                     <div class="is-size-5 publication-authors">
                         Anonymous Submission to Interspeech 2024
 
                     </div>
 
 
-
-
-
-
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 </section>
 
@@ -63,8 +60,8 @@
 <section class="hero teaser">
     <div class="container is-max-desktop">
         <div class="hero-body">
-<!--            <img poster="" id="tree" autoplay="" controls="" muted="" loop="" height="90%">-->
-            <img src="static/images/model.png" alt="Italian Trulli", style="width: 50%">
+            <!--            <img poster="" id="tree" autoplay="" controls="" muted="" loop="" height="90%">-->
+            <img src="static/images/model.png" alt="Italian Trulli" , style="width: 50%">
 
         </div>
     </div>
@@ -80,21 +77,19 @@
                 <h2 class="title is-3">Abstract</h2>
                 <div class="content has-text-justified">
                     <p>
-                        We tackle the task of text-to-speech (TTS) in Hebrew. Traditional Hebrew contains Diacritics
-                        (“Nikud”), which dictates the
-                        way individuals should pronounce given words, however modern Hebrew rarely uses them. The lack
-                        of Diacritics in modern
-                        Hebrew results in readers expected to conclude the correct pronunciation and understand which
-                        phonemes to use based on the
-                        context. This imposes an inheriting challenge on TTS systems
-                        to accurately map between text to audio. In this study, we propose a Diacritics-Free TTS method,
-                        which leverages contextualized text representation together with a word-piece tokenizer.
-                        We demonstrate the efficiency of the proposed method considering a TTS method operating over
-                        discrete speech representation
-                        optimized using in-the-wild weakly supervised recordings. Results suggest the proposed method is
-                        superior to the evaluated
-                        baselines considering both content preservation, and naturality
-                        of the generated speech. </p>
+                        We tackle the task of text-to-speech (TTS) in Hebrew. Traditional Hebrew contains
+                        Diacritics ('Nikud'), which dictates the way individuals should pronounce given words,
+                        however modern Hebrew rarely uses them. The lack of Diacritics in modern Hebrew results in
+                        readers expected to conclude the correct pronunciation and understand which phonemes to use
+                        based on the context. This imposes an inheriting challenge on TTS systems to accurately map
+                        between text-to-speech. In this study, we propose to adopt a language modeling Diacritics-Free
+                        TTS approach, for the task of Hebrew TTS. The langauge model (LM) operates on discrete speech
+                        representation and condition on a WordPiece tokenizer. We optimize the proposed method using
+                        in-the-wild weakly supervised recordings, and compare it to several Diacritic based Hebrew TTS
+                        systems. Results suggest the proposed method is superior to the evaluated baselines considering
+                        both content preservation, and neutrality of the generated speech.
+
+                    </p>
                 </div>
             </div>
         </div>
@@ -114,124 +109,155 @@
                     <th class="audio-header-row">Diacritic-Free Hebrew Prompt</th>
                     <th class="audio-header-row">mms</th>
                     <th class="audio-header-row">Roboshaul</th>
-                    <th class="audio-header-row">Char</th>
-                    <th class="audio-header-row">WordPiece</th>
+                    <th class="audio-header-row">Ours (chars)</th>
+                    <th class="audio-header-row"><b>Ours (WordPiece)</b></th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td class="hebrew-cell">
-                        היי מה קורה
-                    </td>
-                    <td class="audio-cell">
-                        Empty
+                        תגידו, גנבו לכם פעם את האוטו ופשוט ידעתם שאין טעם להגיש תלונה במשטרה.
                     </td>
                     <td class="audio-cell">
                         <audio controls style="width: 90px;">
-                            <source src=./static/audio/subword_v2/osim_temp=1-top_k=50_0.wav>
+                            <source src=./static/audio/mms/1.wav>
                         </audio>
                     </td>
                     <td class="audio-cell">
-                        Empty
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/roboshaul/1.wav>
+                        </audio>
+                    </td>
+                    <td class="audio-cell">
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/char/1.wav>
+                        </audio>
                     </td>
 
                     <td class="audio-cell">
-                        Empty
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/word/1.wav>
+                        </audio>
                     </td>
 
                 </tr>
 
                 <tr>
                     <td class="hebrew-cell">
-                        אבל מה שעובר על סמוטריץ׳ הוא לא הסיפור הסיפור הוא משהו אחר לגמרי
-                    </td>
-                    <td class="audio-cell">
-                        Empty
+                        הדרבי תמיד היה המשחק הכי חשוב, אך בשנים האחרונות הוא נעשה כמעט הדבר היחיד שחשוב.
                     </td>
                     <td class="audio-cell">
                         <audio controls style="width: 90px;">
-                            <source src=./static/audio/subword_v2/osim_temp=1-top_k=50_1.wav>
+                            <source src=./static/audio/mms/2.wav>
                         </audio>
                     </td>
                     <td class="audio-cell">
-                        Empty
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/roboshaul/2.wav>
+                        </audio>
+                    </td>
+                    <td class="audio-cell">
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/char/2.wav>
+                        </audio>
                     </td>
 
                     <td class="audio-cell">
-                        Empty
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/word/2.wav>
+                        </audio>
                     </td>
 
                 </tr>
 
                 <tr>
                     <td class="hebrew-cell">
-                        ובשביל להבין למה מחיר הדלק כל כך עלה צריך לחזור שנתיים אחורנית
-                    </td>
-                    <td class="audio-cell">
-                        Empty
+                        בראשית הייתה חללית מסוג נחתת.
                     </td>
                     <td class="audio-cell">
                         <audio controls style="width: 90px;">
-                            <source src=./static/audio/subword_v2/osim_temp=1-top_k=50_2.wav>
+                            <source src=./static/audio/mms/3.wav>
                         </audio>
                     </td>
                     <td class="audio-cell">
-                        Empty
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/roboshaul/3.wav>
+                        </audio>
+                    </td>
+                    <td class="audio-cell">
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/char/3.wav>
+                        </audio>
                     </td>
 
                     <td class="audio-cell">
-                        Empty
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/word/3.wav>
+                        </audio>
                     </td>
 
                 </tr>
 
                 <tr>
                     <td class="hebrew-cell">
-                        כששאלתי אותה למה היא החליטה לפתוח עסק של לק ג'ל התשובה שלה היתה מאוד ברורה
-                    </td>
-                    <td class="audio-cell">
-                        Empty
+                        אני חושב שאחת הסיבות שאני לוקח את זה נורא נורא קשה.
                     </td>
                     <td class="audio-cell">
                         <audio controls style="width: 90px;">
-                            <source src=./static/audio/subword_v2/osim_temp=1-top_k=50_3.wav>
+                            <source src=./static/audio/mms/4.wav>
                         </audio>
                     </td>
                     <td class="audio-cell">
-                        Empty
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/roboshaul/4.wav>
+                        </audio>
+                    </td>
+                    <td class="audio-cell">
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/char/4.wav>
+                        </audio>
                     </td>
 
                     <td class="audio-cell">
-                        Empty
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/word/4.wav>
+                        </audio>
                     </td>
 
                 </tr>
-
                 <tr>
                     <td class="hebrew-cell">
-                        תגידו גנבו לכם פעם את האוטו ופשוט ידעתם שאין טעם להגיש תלונה במשטרה
-                    </td>
-                    <td class="audio-cell">
-                        Empty
+                        מה שבהגדרה משאיר את הכלכלה ההונגרית מאחור, אפילו ביחס למדינות כמו פולין.
                     </td>
                     <td class="audio-cell">
                         <audio controls style="width: 90px;">
-                            <source src=./static/audio/subword_v2/osim_temp=1-top_k=50_4.wav>
+                            <source src=./static/audio/mms/5.wav>
                         </audio>
                     </td>
                     <td class="audio-cell">
-                        Empty
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/roboshaul/5.wav>
+                        </audio>
+                    </td>
+                    <td class="audio-cell">
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/char/5.wav>
+                        </audio>
                     </td>
 
                     <td class="audio-cell">
-                        Empty
+                        <audio controls style="width: 90px;">
+                            <source src=./static/audio/word/5.wav>
+                        </audio>
+                                                <h1>Zero Shoot</h1>
+
                     </td>
 
                 </tr>
+
 
                 </tbody>
             </table>
-
 
 
         </div>
